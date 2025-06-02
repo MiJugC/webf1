@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fórmula 1 - Inicio</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    #countdown {
+      background: #222;
+      color: #f39c12;
+      font-size: 1.5rem;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 600px;
+      margin: 30px auto;
+      box-shadow: 0 0 15px rgba(243, 156, 18, 0.7);
+      font-family: Arial, sans-serif;
+    }
+    main iframe {
+      width: 100%;
+      max-width: 900px;
+      height: 600px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(243,156,18,0.7);
+      display: block;
+      margin: 40px auto 20px auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Enciclopedia de Fórmula 1</h1>
+  </header>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="equipos.html">Equipos</a>
+    <a href="pilotos.html">Pilotos</a>
+    <a href="calendario.html">Calendario</a>
+    <a href="historia.html">Historia</a>
+  </nav>
+  <main>
+    <h2>Bienvenido a la F1</h2>
+    <p>Explora el mundo de la Fórmula 1: historia, escuderías, pilotos legendarios y el calendario actual.</p>
+
+    <div id="countdown">
+      Cargando cuenta atrás...
+    </div>
+
+<h2>Resultados de la última carrera de F1: Mónaco 2025</h2>
+    
+
+    <iframe
+      src="https://www.motorsport.com/f1/results/"
+      title="Resultados en vivo Fórmula 1 - Motorsport"
+      loading="lazy"
+      sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+    ></iframe>
+
+    <img src="img/logo-f1.jpg" alt="Logo Fórmula 1" />
+  </main>
+
+  <script>
+    // Fecha de la próxima carrera: GP de Barcelona 1 junio 2025 (hora local aprox)
+    const nextGPDate = new Date('2025-06-01T15:00:00');
+
+    const countdownEl = document.getElementById('countdown');
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = nextGPDate - now;
+
+      if (diff <= 0) {
+        countdownEl.textContent = "¡El Gran Premio ha comenzado!";
+        clearInterval(interval);
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      countdownEl.textContent =
+        `Faltan ${days} días, ${hours}h ${minutes}m ${seconds}s para el GP de Barcelona 2025`;
+    }
+
+    updateCountdown();
+    const interval = setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>

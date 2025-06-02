@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Calendario 2025 - Fórmula 1</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;  /* fondo blanco */
+      color: #333;             /* texto oscuro */
+      margin: 0;
+      padding: 0 20px;
+    }
+        main h2 {
+      border-bottom: 2px solid #f39c12;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      color: #f39c12;
+    }
+    .calendar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .event {
+      background: #f9f9f9;   /* fondo claro para eventos */
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(243, 156, 18, 0.2);
+      transition: transform 0.3s ease;
+      color: #333;
+    }
+    .event:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(243, 156, 18, 0.5);
+    }
+    .event h3 {
+      margin-top: 0;
+      color: #f39c12;
+    }
+    .date {
+      font-weight: bold;
+      font-size: 1.1em;
+      margin-bottom: 10px;
+      color: #555;
+    }
+    .description {
+      font-size: 0.9em;
+      line-height: 1.4;
+      color: #666;
+    }
+    footer {
+      text-align: center;
+      margin: 30px 0 20px;
+      font-size: 0.9em;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <header>
+  <h1>Calendario 2025 de Fórmula 1</h1>
+</header>
+
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="equipos.html">Equipos</a>
+  <a href="pilotos.html">Pilotos</a>
+  <a href="calendario.html">Calendario</a>
+  <a href="historia.html">Historia</a>
+</nav>
+
+  <main>
+    <h2>Grandes Premios Confirmados</h2>
+    <div class="calendar">
+      <article class="event">
+        <h3>GP de Bahréin</h3>
+        <p class="date">2 de marzo</p>
+        <p class="description">
+          El circuito de Sakhir, en Bahréin, fue el primer Gran Premio nocturno de la F1 en 2008 y es conocido por su trazado rápido y moderno en medio del desierto.
+        </p>
+      </article>
+
+      <article class="event">
+        <h3>GP de Arabia Saudita</h3>
+        <p class="date">9 de marzo</p>
+        <p class="description">
+          El circuito urbano de Jeddah es uno de los más rápidos del calendario y un desafío para los pilotos debido a sus muros cercanos y curvas rápidas junto al mar Rojo.
+        </p>
+      </article>
+
+      <article class="event">
+        <h3>GP de Australia</h3>
+        <p class="date">23 de marzo</p>
+        <p class="description">
+          Melbourne alberga el GP de Australia en el circuito de Albert Park, conocido por ser una carrera de apertura típica y por sus condiciones climáticas impredecibles.
+        </p>
+      </article>
+
+      <article class="event">
+        <h3>GP de Mónaco</h3>
+        <p class="date">25 de mayo</p>
+        <p class="description">
+          El circuito urbano de Montecarlo es uno de los más emblemáticos y difíciles, con sus estrechas calles y la legendaria curva del Fairmont. Es una prueba de precisión y habilidad al máximo nivel.
+        </p>
+      </article>
+
+      <article class="event">
+        <h3>GP de Gran Bretaña</h3>
+        <p class="date">6 de julio</p>
+        <p class="description">
+          Silverstone es el hogar histórico de la F1, sede del primer Gran Premio en 1950. Sus rápidas curvas y largas rectas hacen que sea uno de los circuitos más queridos por pilotos y aficionados.
+        </p>
+      </article>
+
+      <article class="event">
+        <h3>GP de Italia (Monza)</h3>
+        <p class="date">7 de septiembre</p>
+        <p class="description">
+          Monza, conocido como el "Templo de la Velocidad", es uno de los circuitos más antiguos y rápidos del mundo, con su icónica recta principal y la curva Parabólica.
+        </p>
+      </article>
+
+      <article class="event">
+        <h3>GP de Las Vegas</h3>
+        <p class="date">22 de noviembre</p>
+        <p class="description">
+          El regreso de Las Vegas a la F1 trae un circuito urbano nocturno alrededor del famoso Strip, combinando glamour, espectáculo y un reto técnico para los pilotos.
+        </p>
+      </article>
+
+      <article class="event">
+        <h3>GP de Abu Dabi</h3>
+        <p class="date">7 de diciembre</p>
+        <p class="description">
+          Yas Marina es un circuito moderno y espectacular, que combina la carrera diurna y nocturna. Es conocido por sus instalaciones de lujo y la icónica puesta de sol.
+        </p>
+      </article>
+    </div>
+    <p style="margin-top: 30px; font-style: italic; color: #999;">
+      * El calendario es preliminar y puede estar sujeto a cambios oficiales por parte de la FIA.
+    </p>
+  </main>
+  <footer>
+    <p>© 2025 Fórmula 1. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
